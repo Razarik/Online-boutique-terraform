@@ -1,0 +1,9 @@
+# Local terraform files
+**/.teraform/*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# IDE files
+**/.idea/*
