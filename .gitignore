@@ -6,4 +6,6 @@
 *.tfstate.*
 
 # IDE files
-**/.idea/*
+.idea/*
+
+#
