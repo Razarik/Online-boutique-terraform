@@ -1,12 +1,8 @@
-locals {
-  cluster_type = "deploy-service"
-}
-
 module "gke" {
   source = "terraform-google-modules/kubernetes-engine/google"
   version = "~> 12.0"
   project_id = var.project_id
-  name = "${local.cluster_type}-cluster"
+  name = "${var.project_id}-gke-cluster"
   region = var.region
   network = google_compute_network.vpc.name
   subnetwork = google_compute_subnetwork.subnet.name
