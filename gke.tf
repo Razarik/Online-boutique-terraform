@@ -9,4 +9,6 @@ module "gke" {
   ip_range_pods = "${var.project_id}-pod-range"
   ip_range_services = "${var.project_id}-service-range"
   skip_provisioners = true
+  create_service_account = false
+  service_account = "${google_service_account.gke-least-privilege-account.account_id}@${var.project_id}.iam.gserviceaccount.com"
 }
