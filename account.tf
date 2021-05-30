@@ -26,9 +26,3 @@ resource "google_project_iam_member" "stackdriver-writer" {
   member = "serviceAccount:${google_service_account.gke-least-privilege-account.email}"
   role = "roles/stackdriver.resourceMetadata.writer"
 }
-
-resource "google_project_iam_member" "monitoring-timeseries" {
-  project = var.project_id
-  member = "serviceAccount:${google_service_account.gke-least-privilege-account.email}"
-  role = "roles/monitoring.timeSeries.create"
-}
